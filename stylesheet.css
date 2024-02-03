@@ -661,16 +661,82 @@ section .title::after {
 .social-menu ul li:nth-child(5) a:hover {
   background-color: #e33054;
 }
-
-
-.fa-brands {
-  color: white;
+/*-----*/
+::selection{
+  background: rgba(23,162,184,0.3);
+}
+.wrapper{
+  background: radial-gradient(#e1efff, #041d3d);;
+  max-width: 2000px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .box{
+  background:  radial-gradient(#e1efff, #041d3d);;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #17a2b8;
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 17px;
+}
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #17a2b8;
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: #17a2b8;
+}
+.box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #17a2b8;
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid  radial-gradient(#e1efff, #041d3d);;
+}
+.box:hover .content .image img{
+  background: radial-gradient(#e1efff, #041d3d);;
 }
 
-.fa-solid {
-  color: #fff;
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
 }
-
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 100%;
+  }
+}
 /*  Footer  */
 footer {
   background: #111;
@@ -687,7 +753,6 @@ footer span a {
 footer span a:hover {
   text-decoration: underline;
 }
-
 /*  Media Query  */
 @keyframes pulsate {
   0% {
@@ -828,5 +893,15 @@ footer span a:hover {
     width: 35px;
     font-size: 23px;
     line-height: 38px;
+  }
+}
+
+@media(max-width: 768px){
+  .testimonial-container{
+    padding: 20px 30px;
+  }
+  
+  .fa-quote{
+    display: none;
   }
 }
